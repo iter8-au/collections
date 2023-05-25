@@ -1,0 +1,14 @@
+/.editorconfig export-ignore
+/.gitattributes export-ignore
+/.github/ export-ignore
+/.gitignore export-ignore
+/bin/ export-ignore
+/build/ export-ignore
+/docs/ export-ignore
+/phpstan.neon.dist export-ignore
+/phpunit.xml.dist export-ignore
+/psalm-baseline.xml export-ignore
+/psalm.xml export-ignore
+/resources/ export-ignore
+/SECURITY.md export-ignore
+/tests/ export-ignore

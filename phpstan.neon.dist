@@ -1,0 +1,8 @@
+parameters:
+    tmpDir: ./build/cache/phpstan
+    treatPhpDocTypesAsCertain: false
+    reportUnmatchedIgnoredErrors: true
+    level: max
+    paths:
+        - %currentWorkingDirectory%/src
+        - %currentWorkingDirectory%/tests
