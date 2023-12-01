@@ -66,7 +66,7 @@ final class ArraySet extends Set
      * @param list<array<array-key, int|string>> $originalData
      */
     public static function createFromArrayAndReindex(
-        array $originalData,
+        iterable $originalData,
         string $columnToReindexBy,
     ): self {
         /** @var array<array-key, array<array-key, int|string>> $data */

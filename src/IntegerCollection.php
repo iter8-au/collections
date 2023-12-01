@@ -28,18 +28,26 @@ final class IntegerCollection extends Collection
     }
 
     /**
-     * @param list<array<array-key, int>> $originalData
+     * @param list<array<array-key, int|null>> $originalData
      */
     public static function createFromArrayExtractingAndReindexing(
-        array $originalData,
+        iterable $originalData,
         string $columnToExtract,
         string $columnToReindexBy,
+        int $fallbackColumnToExtract = null,
     ): self {
         $extractedData = [];
 
-        // TODO: We could add index existence checks here for consistency.
         foreach ($originalData as $row) {
-            $extractedData[$row[$columnToReindexBy]] = $row[$columnToExtract];
+            // TODO: We could add index existence checks here for consistency
+            $extractedValue = $row[$columnToExtract];
+
+            // Override the extracted column with the fallback, if we have a fallback AND if the extracted value is null.
+            if (null !== $fallbackColumnToExtract && null === $extractedValue) {
+                $extractedValue = (int) $row[$fallbackColumnToExtract];
+            }
+
+            $extractedData[(int) $row[$columnToReindexBy]] = (int) $extractedValue;
         }
 
         return new self($extractedData);

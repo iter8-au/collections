@@ -25,7 +25,7 @@ final class IntegerSet extends Set
     /**
      * @param list<numeric> $originalData
      */
-    public static function createFromNumericValues(array $originalData): self
+    public static function createFromNumericValues(iterable $originalData): self
     {
         $data = [];
 

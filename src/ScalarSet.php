@@ -26,7 +26,7 @@ final class ScalarSet extends Set
      * @param list<array<array-key, int|string>> $originalData
      */
     public static function createFromArrayExtractingAndReindexing(
-        array $originalData,
+        iterable $originalData,
         string $columnToExtract,
         string $columnToReindexBy,
     ): self {
