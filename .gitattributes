@@ -5,7 +5,7 @@
 /bin/ export-ignore
 /build/ export-ignore
 /docs/ export-ignore
-/phpstan.neon.dist export-ignore
+/phpstan.dist.neon export-ignore
 /phpunit.xml.dist export-ignore
 /psalm-baseline.xml export-ignore
 /psalm.xml export-ignore
