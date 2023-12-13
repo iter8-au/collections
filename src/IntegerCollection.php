@@ -28,7 +28,7 @@ final class IntegerCollection extends Collection
     }
 
     /**
-     * @param list<array<array-key, int|null>> $originalData
+     * @param iterable<array<array-key, int>> $originalData
      */
     public static function createFromArrayExtractingAndReindexing(
         iterable $originalData,
