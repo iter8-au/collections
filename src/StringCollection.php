@@ -64,7 +64,7 @@ class StringCollection extends Collection
         iterable $originalData,
         string $columnToExtract,
         string $columnToReindexBy,
-        string $fallbackColumnToExtract = null,
+        ?string $fallbackColumnToExtract = null,
     ): self {
         $extractedData = [];
         foreach ($originalData as $row) {
