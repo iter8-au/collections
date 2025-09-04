@@ -34,7 +34,7 @@ final class IntegerCollection extends Collection
         iterable $originalData,
         string $columnToExtract,
         string $columnToReindexBy,
-        int $fallbackColumnToExtract = null,
+        ?int $fallbackColumnToExtract = null,
     ): self {
         $extractedData = [];
 
